@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         //colocar as configurações
-        plugin = {},
+        plugin = {"json:target/reports/cucumberReport.json", "html:target/reports/"},
         //pasta onde estão seus bdds
         features = "src/test/resources/features",
         //onde estão os steps

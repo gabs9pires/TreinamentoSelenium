@@ -5,8 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import support.Utils;
 
-public class HomePage {
+public class HomePage extends Utils {
 
     WebDriver driver;
     public HomePage(WebDriver driver) {
@@ -15,6 +16,7 @@ public class HomePage {
 
     public void acessarAplicacao(){
         driver.get("https://www.qazando.com.br/curso.html");
+        esperarElementoPresente(By.id("btn-ver-cursos"), 10);
         Assert.assertEquals(true, driver.findElement(By.id("btn-ver-cursos")).isDisplayed());
     }
 
@@ -24,7 +26,7 @@ public class HomePage {
         Thread.sleep(2000);
     }
 
-    public void preencheEmail() throws InterruptedException {
+    public void preencheEmail() {
         driver.findElement(By.id("email")).sendKeys("gabriela@gmail.com");
     }
 
