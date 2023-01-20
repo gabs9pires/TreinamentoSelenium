@@ -26,6 +26,7 @@ public class DescontosStep extends RunCucumberTest {
     public void clico_em_ganhar_cupom(){
         homePage.clickGanharDesconto();
     }
+
     @Entao("^eu vejo o código de desconto$")
     public void eu_vejo_o_codigo_de_desconto(){
         homePage.verificarCupomDesconto();
