@@ -16,7 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
         features = "src/test/resources/features",
         //onde estão os steps
         glue = {"steps"},
-        tags = {"~@ignore"}
+        tags = {"@gerar-cupom"}
 )
 public class RunCucumberTest {
     public static WebDriver driver;

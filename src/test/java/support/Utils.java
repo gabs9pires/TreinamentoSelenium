@@ -10,8 +10,8 @@ import java.time.Duration;
 
 public class Utils extends RunCucumberTest {
 
-    public void esperarElementoPresente(By element, int tempo){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(tempo));
+    public void esperarElementoPresente(By element, Integer tempo){
+        WebDriverWait wait = new WebDriverWait(driver, tempo);
         wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 }
